@@ -1,0 +1,85 @@
+#ouralumni h1{
+  font-family: sans-serif;
+  font-size: 40px;
+  margin:10px
+}
+#ouralumni h2{
+  font-family: sans-serif;
+  font-size: 20px;
+  color:rgb(110, 110, 110);
+  font-weight: 60;
+}
+#ouralumni{
+  text-align: center;
+}
+.yearcontainer{
+    font-family: sans-serif;
+  }
+  .year{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    transform: scale(0.1,0.1) rotate(0deg);
+    transition: 0.5s;
+    opacity: 0;
+    background: black;
+    color: white;
+  }
+  .names{
+    margin:0px;
+    padding:20px;
+    transition: 0.5s;
+  }
+  .names:hover{
+    margin: 15px;
+    padding: 5px;
+    border: 2px solid cyan;
+  }
+  .names h3{
+    font-size: 18px;
+    font-weight: 100;
+  }
+  .names h4{
+    font-size: 14px;
+    font-weight: 90;
+    color: rgb(68, 68, 68);
+  }
+  .yearS{
+    transform: scale(1,1) rotate(360deg) !important;
+    opacity: 1 !important;
+    color:black !important;
+    background: none !important;
+    margin-bottom: 50px;
+  }
+  #end{
+    margin-top: 100px;
+    display: block;
+    width:150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  @media (max-width:570px){
+    .names{
+      margin:0px;
+      padding:15px;
+    }
+    .names:hover{
+      margin: 12px;
+      padding: 3px;
+      border: 2px solid cyan;
+    }
+    .names h3{
+      font-size: 16px;
+      font-weight: 100;
+    }
+    .names h4{
+      font-size: 12px;
+      font-weight: 90;
+      color: rgb(68, 68, 68);
+    }
+    #end{
+      width:130px;
+      margin-top: 60px;
+    }
+  }

@@ -1,0 +1,677 @@
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+html{
+  scroll-behavior: smooth;
+}
+#homeimg{
+  position: fixed;
+  width:100px;
+  bottom:20px;
+  right:20px;
+  cursor: pointer;
+  margin-top: 50px;
+  transform: scale(1,1);
+  transition: 0.3s;
+}
+#homeimg:hover{
+  transform: scale(1.3,1.3);
+}
+#navbar {
+  font-family: sans-serif;
+  width: 100%;
+  background: linear-gradient(to right, #00fff0, #5af051);
+  position: fixed;
+  top:0;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  height: 50px;
+}
+ul {
+  display: flex;
+  list-style: none;
+  align-content: center;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 3px;
+  flex-direction: row;
+  transition: 0.5s;
+}
+li {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#navbar ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 13px;  
+  transition: 0.5s;
+  font-size: 15px;
+}
+#navbar ul li a:hover {
+  border: 0.7px solid white;
+  margin: 10px;
+  padding: 3px;
+}
+#menu{
+  position: fixed;
+  z-index: 2;
+  top:6px;
+  left:10px;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.35s;
+}
+#menu div {
+  width: 30px;
+  border-radius: 4.2px;
+  height: 4px;
+  background-color: white;
+  margin: 7px;
+  transition: 0.35s;
+}
+#bar1,#bar2,#bar3{
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.bar1change{
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.bar2change {opacity: 0;}
+
+.bar3change {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+#homepage{
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#hometext{
+  position: absolute;
+  right:20px;
+  top: 100px;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+}
+#hometext h1{
+  font-family: sans-serif;
+  font-size: 85px;
+  font-weight:800;
+  color:navy;
+  display: flex;
+  line-height:50px;
+  text-shadow:5px 5px 2px red;
+}
+.headingS{
+opacity:1 !important;
+}
+#hometext h2{
+  font-family: sans-serif;
+  color:grey;
+  font-weight: 60;
+  font-size: 25px;
+}
+#homepage img{
+  width:670px;
+  position: relative;
+  left:0;
+  opacity: 0;
+  transition: 0.5s;
+}
+.homepageimgS{
+  opacity: 1 !important
+}
+#aboutus{
+  text-align: center;
+  padding:30px;
+}
+#aboutustext{
+  background:black;
+  padding:10px;
+  box-shadow: 10px 10px 10px grey;
+  opacity: 0;
+  transition: 0.5s;
+  transform: scale(0.1,0.1);
+  color:white
+}
+.aboutustextS{
+  opacity: 1 !important; 
+  transform: scale(1,1)  rotate(360deg) !important;
+  color:black !important;
+  background: rgb(240,240,240) !important;
+}
+#aboutus h1,#events #heading h1,#ouralumni h1{
+  font-family: sans-serif;
+  font-size: 40px;
+  margin:10px
+}
+#aboutus h2,#events #heading h2,#ouralumni h2{
+  font-family: sans-serif;
+  font-size: 20px;
+  color:rgb(110, 110, 110);
+  font-weight: 60;
+}
+#ouralumni{
+  text-align: center;
+}
+#aboutus p{
+  font-family: sans-serif;
+  font-size: 15px;
+  width:80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#photos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+#photosbigh1{
+  width:100%
+}
+#photosbigh2{
+  width:100%
+}
+.photosimg{
+  border-radius: 50%;
+  width: 170px;
+  padding:0px;
+  transition: 0.5s;
+  margin:30px;
+  box-shadow: 0px 0px 15px red;
+  transition: 0.5s;
+  opacity: 0;
+}
+.photosimgS{
+  opacity: 1;
+}
+.photosimg:hover{
+  padding:30px;
+  margin: 0px;
+  background: radial-gradient(violet,indigo,blue,green,yellow,orange,red);
+}
+.photosh1{
+  font-family: sans-serif;
+  font-weight: 60;
+  font-size: 25px;
+  margin-top: 10px;
+  line-height: 0;
+}
+.photosh2{
+  font-family: sans-serif;
+  font-weight: 60;
+  font-size: 17px;
+  margin-top: 0;
+  color:rgb(139, 139, 139)
+}
+#stats{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background:rgb(240,240,240);
+  box-shadow: 10px 10px 10px grey;
+  padding:30px;
+  margin-top: 40px;
+}
+#stats div{
+  margin:15px 30px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.statsdivS{
+  opacity: 1 !important;   
+}
+#stats h1{
+  color:rgb(0, 255, 179);
+  font-size: 60px;
+  text-shadow: 3px 3px 3px blue;
+}
+#stats h2{
+  color: magenta;
+}
+#events{
+  text-align: center;
+  padding: 30px;
+  background: rgb(240,240,240);
+}
+#events #cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#events #cards .card{
+  width:350px;
+  background: white;
+  box-shadow: 5px 5px 4px grey;
+  border-radius: 10px;
+  text-align: center;
+  padding:20px;
+  margin:15px 10px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.eventscardscardS{
+  opacity: 1 !important;
+}
+#events #cards .card img{
+  width:300px
+}
+#events #cards .card h1{
+  display: inline-flex;
+  font-family: sans-serif;
+  font-size: 25px;
+  padding:0;
+  margin:10px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+#events #cards .card h1:hover{
+  padding:10px;
+  margin:0;
+  background: radial-gradient(orange,magenta);
+}
+#events #cards .card h2{
+  font-family: sans-serif;
+  font-size: 18px;
+  margin-top: 0;
+  font-weight: 70;
+}
+#events #cards .card p{
+  font-family: sans-serif;
+  font-size: 15px;
+}
+#events #cards .card .status{
+  display: block;
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+#events #cards .card a,#ouralumni a{
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 20px;
+  color:white;
+  background: cyan;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px blue;
+}
+.yearcontainer{
+  font-family: sans-serif;
+}
+.year{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  transform: scale(0.1,0.1) rotate(0deg);
+  transition: 0.5s;
+  opacity: 0;
+  background: black;
+  color: white;
+}
+.names{
+  margin:0px;
+  padding:20px;
+  transition: 0.5s;
+}
+.names:hover{
+  margin: 15px;
+  padding: 5px;
+  border: 2px solid cyan;
+}
+.names h3{
+  font-size: 18px;
+  font-weight: 100;
+}
+.names h4{
+  font-size: 14px;
+  font-weight: 90;
+  color: rgb(68, 68, 68);
+}
+.yearS{
+  transform: scale(1,1) rotate(360deg) !important;
+  opacity: 1 !important;
+  color:black !important;
+  background: none !important;
+  margin-bottom: 50px;
+}
+#comment{
+  text-align: center;
+  margin-bottom: 30px;
+  background: rgb(240,240,240);
+  margin-top: 50px;
+  padding: 20px;
+}
+#comment h1{
+  font-family: sans-serif;
+  font-size: 30px;
+}
+label{
+  display: block;
+  color:blue;
+  font-size: 18px;
+  margin:5px
+}
+input{
+  margin: 10px;
+  font-size: 18px;
+}
+input[type=submit]{
+  display: block;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  color:red;
+  background: black;
+  border:none;
+  font-size: 18px;
+}
+textarea{
+  margin: 10px;
+  font-size: 18px;
+  width:500px;
+  height:100px;
+  resize: none;
+}
+#end{
+  margin-top: 100px;
+  display: block;
+  width:150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+#submitted{
+  visibility: visible;
+}
+@media (min-width:880px) and (max-width:1100px){
+  #hometext{
+    margin-left:100px
+  }
+  #hometext h1{
+    font-size: 60px;
+    text-shadow: 2px 2px 2px red;
+  }
+  #hometext h2{
+    font-size:22px
+  }
+  #homepage img{
+    width:550px
+  }
+  #events #cards .card{
+    width:300px
+  }
+}
+@media (min-width:570px) and (max-width:880px){
+  #hometext{
+    position: relative;
+    top:0;
+    left:0;
+    margin:0;
+    display: block;
+    width:100%;
+    text-align: center;
+  }
+  #hometexth1{
+    width:100%;
+    display: flex;
+    justify-content: center;
+  }
+  #hometext h1{
+    margin:10px;
+    font-size: 60px;
+    text-shadow: 2px 2px 2px red;
+  }
+  #homepage img{
+    position: static;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float:none;
+    width:90%;
+  }
+  #aboutus h1,#events #heading h1,#ouralumni h1{
+    font-size: 30px;
+  }
+  #aboutus h2,#events #heading h2,#ouralumni h2{
+    font-size: 18px;
+  }  
+  #events #cards .card{
+    width:300px
+  }
+}
+@media (min-width:570px) and (max-width:705px){
+  #navbar{
+    justify-content: left;
+  }
+#menu{
+visibility: visible;
+opacity: 1;
+}
+ul{
+margin-top: 50px;
+visibility: hidden;
+opacity: 0;
+flex-direction: column;
+position: relative;
+left:-300px;
+transition-duration:0.5s
+}
+.ulchange{
+visibility: visible;
+opacity: 1;
+left:-5px
+}
+#navbar ul li{
+background: rgba(156, 90, 243, 0.7);
+}
+#aboutus h1,#events #heading h1,#ouralumni h1{
+  font-size: 30px;
+}
+#aboutus h2,#events #heading h2,#ouralumni h2{
+  font-size: 18px;
+}
+#aboutus p{
+  font-size: 13px;
+  width:90%
+}
+#stats{
+  display: block;
+}
+#stats div{
+  margin:50px 0
+}
+#stats h1{
+  font-size: 60px;
+}
+}
+@media (max-width:570px){
+  #hometext{
+    margin:0;
+    display: block;
+    width:100%;
+    text-align: center;
+    position: relative;
+    top:0;
+    left:0;
+    line-height: 0px;
+  }
+  #hometexth1{
+    width:100%;
+    display: flex;
+    justify-content: center;
+  }
+  #hometext h1{
+    margin:10px;
+    font-size: 35px;
+    text-shadow: 2px 2px 2px red;
+  }
+  #hometext h2{
+    font-size: 18px;
+  }
+  #homepage img{
+    position: static;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float:none;
+    width:100%;
+  }
+  #homeimg{
+    width:80px;
+  }
+#navbar{
+  justify-content: left;
+}
+#menu{
+  visibility: visible;
+  opacity: 1;
+}
+ul{
+  visibility: hidden;
+  opacity: 0;
+}
+  ul{
+    margin-top: 50px;
+    visibility: hidden;
+    opacity: 0;
+    flex-direction: column;
+    position: relative;
+    left:-300px
+  }
+  .ulchange{
+    visibility: visible;
+    opacity: 1;
+    left:-5px
+  }
+  #navbar ul li{
+    background: rgba(156, 90, 243, 0.7);
+  }
+  #aboutus{
+    padding:20px
+  }
+  #aboutus h1,#events #heading h1,#ouralumni h1{
+    font-size: 30px;
+  }
+  #aboutus h2,#events #heading h2,#ouralumni h2{
+    font-size: 18px;
+  }
+  #aboutus p{
+    font-size: 13px;
+    width:100%
+  }
+  .photosimg{
+    width: 150px;
+    margin:20px
+  }
+  .photosimg:hover{
+    padding:20px;
+    margin: 0px;
+    background: radial-gradient(violet,indigo,blue,green,yellow,orange,red);
+  }
+  .photosh1{
+    font-size: 20px;
+  }
+  .photosh2{
+    font-size: 14px;
+  }
+  #stats{
+    display: block;
+  }
+  #stats div{
+    margin:50px 0
+  }
+  #stats h1{
+    font-size: 60px;
+  }
+  #events #cards .card{
+    width:230px;
+    opacity:1
+  }
+  #events #cards .card img{
+    width:220px
+  }
+  #end{
+    width:130px
+  }
+  .names{
+    margin:0px;
+    padding:15px;
+  }
+  .names:hover{
+    margin: 12px;
+    padding: 3px;
+    border: 2px solid cyan;
+  }
+  .names h3{
+    font-size: 16px;
+    font-weight: 100;
+  }
+  .names h4{
+    font-size: 12px;
+    font-weight: 90;
+    color: rgb(68, 68, 68);
+  }
+  #comment{
+    text-align: center;
+    margin-bottom: 30px;
+    background: rgb(240,240,240);
+    margin-top: 50px;
+    padding: 20px;
+  }
+  #comment h1{
+    font-family: sans-serif;
+    font-size: 30px;
+  }
+  label{
+    display: block;
+    color:blue;
+    font-size: 16px;
+    margin:5px
+  }
+  input{
+    margin: 10px;
+    font-size: 15px;
+  }
+  input[type=submit]{
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    color:red;
+    background: black;
+    border:none;
+    font-size: 18px;
+  }
+  textarea{
+    margin: 0;
+    font-size: 15px;
+    width:90%;
+    height:150px;
+  }
+#end{
+  margin-top: 60px;
+}
+}
+@media (max-width:430px){
+  .year{
+    display: inline-block;
+  }
+}
